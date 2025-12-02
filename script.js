@@ -64,22 +64,24 @@ for (const pokemon of pokemons){
     card.appendChild(type);
 
     card.addEventListener("click", function(){
-        console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
-    });
-
+        displaySinglePokemon(pokemon);
+    })
     pokemonCards.appendChild(card);
 }
 
+let pokemonDetailView = document.createElement("div");
+pokemonDetailView.id="pokemon-detail-view";
+pokemonDetailView.classList.add("container");
+pokemonDetailView.classList.add("d-none");
+document.body.appendChild(pokemonDetailView);
+
 // Funktionen
 
-
-const cities = ["Paris", "London", "Berlin"];
-
-cities.forEach(city => {
-  console.log(city);
-  console.log(city.length);
-});
-
+function displaySinglePokemon(pokemon){
+    console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
+    pokemonCards.classList.toggle("d-none");
+    pokemonDetailView.classList.toggle("d-none");
+    }
 
 
 
