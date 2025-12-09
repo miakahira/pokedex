@@ -94,5 +94,13 @@ function createPokemonCard(pokemon){
     return card;
 }
 
+function displayAllPokemon(){
+
+}
 
 // Event-Listeners
+
+title.addEventListener("click", function(){
+    console.log("Titel wurde geklickt")
+    displayAllPokemon()
+})
