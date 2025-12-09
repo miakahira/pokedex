@@ -103,5 +103,7 @@ function displayAllPokemon(){
 
 title.addEventListener("click", function(){
     console.log("Titel wurde geklickt")
+    if (pokemonCards.classList.contains("hidden")){
     displayAllPokemon()
+    }
 })
