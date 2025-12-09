@@ -34,6 +34,34 @@ document.body.appendChild(pokemonCards);
 
 for (const pokemon of pokemons){
 
+    const card = createPokemonCard(pokemon);
+
+    card.addEventListener("click", function(){
+        displaySinglePokemon(pokemon);
+    })
+    pokemonCards.appendChild(card);
+}
+
+let pokemonDetailView = document.createElement("div");
+pokemonDetailView.id="pokemon-detail-view";
+pokemonDetailView.classList.add("container");
+pokemonDetailView.classList.add("d-none");
+document.body.appendChild(pokemonDetailView);
+
+
+// Funktionen
+function displaySinglePokemon(pokemon){
+    console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
+    pokemonCards.classList.toggle("d-none");
+    pokemonDetailView.classList.toggle("d-none");
+
+    const card = createPokemonCard(pokemon);
+
+    pokemonDetailView.appendChild(card);
+    }
+
+
+function createPokemonCard(pokemon){
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -63,28 +91,8 @@ for (const pokemon of pokemons){
     card.appendChild(image);
     card.appendChild(type);
 
-    card.addEventListener("click", function(){
-        displaySinglePokemon(pokemon);
-    })
-    pokemonCards.appendChild(card);
+    return card;
 }
-
-let pokemonDetailView = document.createElement("div");
-pokemonDetailView.id="pokemon-detail-view";
-pokemonDetailView.classList.add("container");
-pokemonDetailView.classList.add("d-none");
-document.body.appendChild(pokemonDetailView);
-
-// Funktionen
-
-function displaySinglePokemon(pokemon){
-    console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
-    pokemonCards.classList.toggle("d-none");
-    pokemonDetailView.classList.toggle("d-none");
-    }
-
-
-
 
 
 // Event-Listeners
