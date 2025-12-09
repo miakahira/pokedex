@@ -45,15 +45,15 @@ for (const pokemon of pokemons){
 let pokemonDetailView = document.createElement("div");
 pokemonDetailView.id="pokemon-detail-view";
 pokemonDetailView.classList.add("container");
-pokemonDetailView.classList.add("d-none");
+pokemonDetailView.classList.add("hidden");
 document.body.appendChild(pokemonDetailView);
 
 
 // Funktionen
 function displaySinglePokemon(pokemon){
     console.log("Das Pokemon " + pokemon.name + " wurde geklickt");
-    pokemonCards.classList.toggle("d-none");
-    pokemonDetailView.classList.toggle("d-none");
+    pokemonCards.classList.toggle("hidden");
+    pokemonDetailView.classList.toggle("hidden");
 
     const card = createPokemonCard(pokemon);
 

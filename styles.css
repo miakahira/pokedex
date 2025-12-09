@@ -49,6 +49,7 @@ body{
     margin:0;
     padding:0;
     background:linear-gradient(135deg, #ff3b30, #ffd700);
+    min-height: 100vh;
 }
 
 .card:hover{
@@ -57,6 +58,16 @@ body{
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.d-none{
-    display: none
+
+#pokemon-cards, #pokemon-detail-view{
+    opacity: 1;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: opacity 0.6s ease, max-high 0.6s ease;
+}
+
+#pokemon-cards.hidden, #pokemon-detail-view.hidden{
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
 }
