@@ -70,3 +70,7 @@ body{
     max-height: 0;
     pointer-events: none;
 }
+
+h1:hover{
+    cursor:pointer;
+}
