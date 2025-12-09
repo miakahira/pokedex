@@ -95,9 +95,9 @@ function createPokemonCard(pokemon){
 }
 
 function displayAllPokemon(){
-
+    pokemonCards.classList.toggle("hidden");
+    pokemonDetailView.classList.toggle("hidden");
 }
-
 // Event-Listeners
 
 title.addEventListener("click", function(){
