@@ -97,6 +97,7 @@ function createPokemonCard(pokemon){
 function displayAllPokemon(){
     pokemonCards.classList.toggle("hidden");
     pokemonDetailView.classList.toggle("hidden");
+    pokemonDetailView.innerHTML=("");
 }
 // Event-Listeners
 
